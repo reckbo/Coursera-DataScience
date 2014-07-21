@@ -1,0 +1,4 @@
+--select count(*) from (
+select docid from Frequency where term = "transactions" or term = "worlds"
+;
+--);

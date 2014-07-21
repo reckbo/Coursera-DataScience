@@ -1,0 +1,9 @@
+--select count(*) from (
+select sum(Am.value*Bm.value) from 
+(select * from A where row_num = 2) as Am
+JOIN
+(select * from B where col_num = 3) as Bm
+on Am.col_num = Bm.row_num 
+--where Am.col_num = Bm.row_num
+;
+--);

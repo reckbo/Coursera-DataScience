@@ -1,0 +1,8 @@
+--select count(*) from (
+select A.docid,A.term,B.term from
+(select * from Frequency where term = "world") as A
+JOIN
+(select * from Frequency where term = "transactions") as B
+on A.docid=B.docid
+;
+--);
